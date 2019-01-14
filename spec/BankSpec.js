@@ -3,13 +3,13 @@
 describe("Account", function(){
   var account;
   beforeEach(function(){
-    account = new Account;
+    account = new Account();
   });
   it("Start with 0 the account's balance",function(){
     expect(account.balance).toEqual(0);
   });
 
-  it("Start with none account", function(){
+  it("Start with none details", function(){
     expect(account.details).toEqual([]);
   });
   it("A client make a deposit of 1000", function(){
@@ -42,4 +42,11 @@ describe("Account", function(){
       balance: 1000
     }]);
   });
+
+  it("Has several records saved for every transaction", function(){
+    account.deposit(1000);
+    account.deposit(1000);
+    account.makeWithdrawal(500);
+    expect(account.details.length).toEqual(3)
+  })
 });
