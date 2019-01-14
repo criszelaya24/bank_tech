@@ -18,13 +18,17 @@ Account.prototype.getBalance = function() {
 		if (this.details[i]["deposit"]) {
 			this.total += this.details[i]["deposit"]
 		}
-		
+		if (this.details[i]["withdrawal"]) {
+			this.withdrawal += this.details[i]["withdrawal"]
+		}
 	}
-	this.balance = this.total
+	this.balance = this.total - this.withdrawal;
 	return this.balance;
 };
 
-
+Account.prototype.makeWithdrawal = function(amount) {
+	this.details.push({withdrawal: amount, date: dateToday()});
+};
 function dateToday() {
 	var date = new Date();
 	var formattedDate = date.toLocaleDateString('en-GB', {

@@ -25,4 +25,10 @@ describe("Account", function(){
     expect(account.getBalance()).toEqual(3000);
   });
 
+  it("Now the client after making a deposit make a withdrawal", function(){
+    account.deposit(1000);
+    account.deposit(2000);
+    account.makeWithdrawal(500);
+    expect(account.getBalance()).toEqual(2500);
+  });
 });
