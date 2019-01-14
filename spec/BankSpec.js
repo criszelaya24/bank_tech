@@ -8,9 +8,7 @@ describe("Account", function(){
   it("Start with 0 the account's balance",function(){
     expect(account.balance).toEqual(0);
   });
-   it("Start with 0 the account's amount",function(){
-    expect(account.amount).toEqual(0);
-  });
+
   it("Start with none account", function(){
     expect(account.details).toEqual([]);
   });
@@ -34,5 +32,14 @@ describe("Account", function(){
 
   it("Raising error when user want to withdrawal not having enough founds", function(){
     expect(account.makeWithdrawal(500)).toEqual("You don't have enough founds!")
+  });
+
+  it("Has a structure for every transaction made by the client", function(){
+    account.deposit(1000);
+    expect(account.details).toEqual([{
+      deposit: 1000,
+      date: '14-Jan-2019',
+      balance: 1000
+    }]);
   });
 });

@@ -2,12 +2,16 @@
 
 function Account(){
 	this.balance = 0;
-	this.amount = 0;
 	this.details = []
 }
 
 Account.prototype.deposit = function(amount) {
-	this.details.push({deposit: amount, date: dateToday()});
+	this.getBalance();
+	if (this.details.length === 0) {
+		this.details.push({deposit: amount, date: dateToday(), balance: amount});
+	}else{
+		this.details.push({deposit: amount, date: dateToday(), balance: this.balance + amount});
+	}
 };
 
 Account.prototype.getBalance = function() {
@@ -31,7 +35,7 @@ Account.prototype.makeWithdrawal = function(amount) {
 	if (this.balance < amount) {
 		return "You don't have enough founds!"
 	}else{
-		this.details.push({withdrawal: amount, date: dateToday()});
+		this.details.push({withdrawal: amount, date: dateToday(), balance: this.balance - amount});
 	}
 };
 function dateToday() {
