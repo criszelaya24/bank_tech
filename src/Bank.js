@@ -27,7 +27,12 @@ Account.prototype.getBalance = function() {
 };
 
 Account.prototype.makeWithdrawal = function(amount) {
-	this.details.push({withdrawal: amount, date: dateToday()});
+	this.getBalance();
+	if (this.balance < amount) {
+		return "You don't have enough founds!"
+	}else{
+		this.details.push({withdrawal: amount, date: dateToday()});
+	}
 };
 function dateToday() {
 	var date = new Date();

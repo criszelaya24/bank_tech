@@ -31,4 +31,8 @@ describe("Account", function(){
     account.makeWithdrawal(500);
     expect(account.getBalance()).toEqual(2500);
   });
+
+  it("Raising error when user want to withdrawal not having enough founds", function(){
+    expect(account.makeWithdrawal(500)).toEqual("You don't have enough founds!")
+  });
 });
