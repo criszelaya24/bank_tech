@@ -14,4 +14,15 @@ describe("Account", function(){
   it("Start with none account", function(){
     expect(account.details).toEqual([]);
   });
+  it("A client make a deposit of 1000", function(){
+    account.deposit(1000);
+    expect(account.getBalance()).toEqual(1000);
+  });
+
+  it("Making a double deposit", function(){
+     account.deposit(1000);
+     account.deposit(2000);
+    expect(account.getBalance()).toEqual(3000);
+  });
+
 });
