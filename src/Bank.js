@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function Account(){
 	this.balance = 0;
@@ -37,6 +37,7 @@ Account.prototype.makeWithdrawal = function(amount) {
 	}else{
 		this.details.push({withdrawal: amount, date: dateToday(), balance: this.balance - amount});
 	}
+	return this.getBalance();
 };
 function dateToday() {
 	var date = new Date();

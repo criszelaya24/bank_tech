@@ -18,6 +18,13 @@
 			-ms-transform: scale(0.8);
 			transform: scale(0.8);
 			}
+
+			.table-wrapper-scroll-y {
+				display: block;
+				max-height: 110px;
+				overflow-y: auto;
+				-ms-overflow-style: -ms-autohiding-scrollbar;
+				}
   	</style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,7 +41,7 @@
   <header>
   	<div style="background-color: black;">
   		<center>
-  		<h1 style="color: white;">Balance</h1><p class="circle shrink" id="balance">0</p>
+  		<h1 style="color: white;">Balance</h1><p class="circle shrink" id="balance"></p>
   		<br>
   		</center>
   	</div>
@@ -49,15 +56,29 @@
             <div class="col-md-3" style="border-style: solid">
             	<h3>Make a deposit?</h3>
             	<input class="form-control" type="number" id="amountDeposit" />
-              <button style="margin-top: 1em;" class="btn btn-primary btn-lg" id="makeDeposit">Accept</button>
+              <button style="margin-top: 1em;" class="btn btn-primary btn-lg" id="makeDeposit">+</button>
             </div>
-          <div class="col-md-6" style="border-style: solid">
-            <h3> Power saving mode is <span id="power-saving-status">ON</span></h3>
-            <button id="temperature-reset" class="btn btn-primary btn-lg">Reset</button>
+          <div class="col-md-3" style="border-style: solid">
+           <h3>Make a withdrawal?</h3>
+            	<input class="form-control" type="number" id="amountWithdrawal" />
+              <button style="margin-top: 1em;" class="btn btn-danger btn-lg" id="makeWithdrawal">-</button>
           </div>
-            <div class="col-md-3" style="border-style: solid">
-            <button class="btn btn-success" id="powersaving-on">PSM on</button>
-            <button class="btn btn-warning" id="powersaving-off">PSM off</button>
+            <div class="col-md-6" style="border-style: solid">
+            <button class="btn btn-success" id="showTransaction" style="margin-bottom: 1em; margin-top: 0.5em">Transaction</button>
+            <div class="table-wrapper-scroll-y">
+				 <table id="transactionForm" class="table table-hover">
+				  <thead>
+				    <tr>
+				      <th scope="col">Date</th>
+				      <th scope="col">Transaction</th>
+				      <th scope="col">Amount</th>
+				      <th scope="col">Balance</th>
+				    </tr>
+				  </thead>
+				  <tbody id="details" style="text-align: center">
+				  </tbody>
+				</table>
+				</div>
           </div>
           </div>
       </div>
