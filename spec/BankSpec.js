@@ -38,7 +38,7 @@ describe("Account", function(){
     account.deposit(1000);
     expect(account.details).toEqual([{
       deposit: 1000,
-      date: '14-Jan-2019',
+      date: '15-Jan-2019',
       balance: 1000
     }]);
   });

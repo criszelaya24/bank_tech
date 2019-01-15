@@ -2,7 +2,7 @@
 
 function Account(){
 	this.balance = 0;
-	this.details = []
+	this.details = [];
 }
 
 Account.prototype.deposit = function(amount) {
