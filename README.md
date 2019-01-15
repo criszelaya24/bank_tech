@@ -12,3 +12,5 @@ Just clone the repo and open index.html, for test open SpecRunner.html.
 * [Boostrap](https://getbootstrap.com) - UI.
 * [JasminFramework](https://jasmine.github.io) - Framwork testing.
 * [Jquery](https://jquery.com/upgrade-guide/3.0/) - Interaction.
+
+![Index](img/index.png)
