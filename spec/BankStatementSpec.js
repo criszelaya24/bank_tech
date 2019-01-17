@@ -9,19 +9,20 @@ describe("Statement", function(){
 		statement = new Statement();
 		headers    = "Date || Credit || Debit || Balance \n"
       	amount     = "1000";
-      	statement.all.add(1000, 1000)
+      	statement.transaction.add(1000, 1000)
 	});
 
 	it("Check if is intance", function(){
 		expect(statement instanceof(Statement)).toBe(true);
 	});
 
-	it("Check to instance be defined", function(){
-		expect(statement.all).toBeDefined();
+
+	it("Verify instance from Transaction", function(){
+		expect(statement.transaction instanceof(Transaction)).toBe(true);
 	});
 
-	it("Check if is reading correctly the details from transactions", function(){
-		expect(statement.all instanceof(Transaction)).toBe(true)
+	it("Check to instance be defined", function(){
+		expect(statement.transaction).toBeDefined();
 	});
 
 	it("check header from the transactions made", function(){

@@ -4,24 +4,29 @@
 	var HeaderDebit = "Debit";
 	var HeaderBalance = "Balance ";
 	var HeaderPilar = " || ";
-	function Statement(all = new Transaction()) {
-		this.all = all;
+
+	function Statement(transaction = new Transaction()) {
+		this.transaction = transaction;
 	}
+
+	Statement.prototype.addTransaction = function(amount, balance) {
+		this.transaction.add(amount, balance);
+	};
 
 	Statement.prototype.displayStatment = function() {
 		var show = HeaderDate + HeaderPilar + HeaderCredit + HeaderPilar + HeaderDebit + HeaderPilar + HeaderBalance + '\n';
-		for (var i = 0; i < this.all.details.length; i++) {
-			show += dateFormater(this.all.details[i]["date"]);
+		for (var i = 0; i < this.transaction.details.length; i++) {
+			show += dateFormater(this.transaction.details[i]["date"]);
 			show += HeaderPilar;
-			if (this.all.details[i]["amount"] > 0) {
-				show += this.all.details[i]["amount"];
+			if (this.transaction.details[i]["amount"] > 0) {
+				show += this.transaction.details[i]["amount"];
 				show += HeaderPilar;
 			}else {
 				show += HeaderPilar;
-				show += this.all.details[i]["amount"];
+				show += this.transaction.details[i]["amount"];
 			}
 			show += HeaderPilar
-			show += this.all.details[i]["balance"];
+			show += this.transaction.details[i]["balance"];
 			show += '\n'
 		}
 		return show;

@@ -13,10 +13,6 @@ describe("Account", function(){
 		expect(account instanceof(Account)).toBe(true);
 	});
 
-	it("Verify instance from Transaction", function(){
-		expect(account.transaction instanceof(Transaction)).toBe(true);
-	});
-
 	it("Check if display function is an instance of statment", function(){
 		expect(account.statement instanceof(Statement)).toBe(true);
 	});
@@ -39,7 +35,7 @@ describe("Account", function(){
 
 		it("verify the instance of transaction been called", function(){
 			account.deposit(amount);
-			expect(account.transaction.add).toHaveBeenCalled();
+			expect(account.statement.transaction.add).toHaveBeenCalled();
 		});
 	});
 
@@ -53,13 +49,13 @@ describe("Account", function(){
 		it("Should add this transaction", function(){
 			account.deposit(amount);
 			account.withdraw(withdraw);
-			expect(account.transaction.add).toHaveBeenCalled();
+			expect(account.statement.transaction.add).toHaveBeenCalled();
 		});
 	});
 
 	describe("Display", function(){
 		it("Check if display function is an instance of statment", function(){
-		
+			expect(typeof account.getStatement()).toBe('string');
 		});
 	});
 });
