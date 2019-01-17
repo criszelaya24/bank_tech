@@ -1,6 +1,6 @@
 (function(exports) {
-	function Transaction(history = []) {
-		this.details = history;
+	function Transaction(array = []) {
+		this.details = array;
 	}
 
 	Transaction.prototype.add = function(amount, balance, date = new Date()) {
