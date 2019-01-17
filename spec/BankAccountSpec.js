@@ -17,6 +17,10 @@ describe("Account", function(){
 		expect(account.transaction instanceof(Transaction)).toBe(true);
 	});
 
+	it("Check if display function is an instance of statment", function(){
+		expect(account.statement instanceof(Statement)).toBe(true);
+	});
+
 	it("Check if balance is defined", function(){
 		expect(account.balance).toBeDefined();
 	});
@@ -50,6 +54,12 @@ describe("Account", function(){
 			account.deposit(amount);
 			account.withdraw(withdraw);
 			expect(account.transaction.add).toHaveBeenCalled();
+		});
+	});
+
+	describe("Display", function(){
+		it("Check if display function is an instance of statment", function(){
+		
 		});
 	});
 });
