@@ -6,7 +6,7 @@ describe("Transaction", function(){
 	var date = new Date(2019, 2, 17)
 	beforeEach(function(){
 		transaction = new Transaction();
-		transaction.add(1000, 1000, date);
+		transaction.add(amount, balance, date);
 	})
 	it("transaction, should be an instance", function(){
 		expect(transaction instanceof(Transaction)).toBe(true);
