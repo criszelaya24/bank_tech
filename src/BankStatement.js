@@ -11,15 +11,17 @@
 	Statement.prototype.displayStatment = function() {
 		var show = HeaderDate + HeaderPilar + HeaderCredit + HeaderPilar + HeaderDebit + HeaderPilar + HeaderBalance + '\n';
 		for (var i = 0; i < this.all.details.length; i++) {
-			show += dateFormater(element.date);
+			show += dateFormater(this.all.details[i]["date"]);
 			show += HeaderPilar;
-			if (element.amount > 0) {
-				show += element.amount;
+			if (this.all.details[i]["amount"] > 0) {
+				show += this.all.details[i]["amount"];
+				show += HeaderPilar;
 			}else {
 				show += HeaderPilar;
-				show += element.amount;
+				show += this.all.details[i]["amount"];
 			}
-			show += element.balance;
+			show += HeaderPilar
+			show += this.all.details[i]["balance"];
 			show += '\n'
 		}
 		return show;
