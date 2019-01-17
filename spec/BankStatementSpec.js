@@ -28,8 +28,4 @@ describe("Statement", function(){
 	it("check header from the transactions made", function(){
 		expect(statement.displayStatment()).toContain(headers);
 	});
-
-	it("verifying that the transaction can contain details", function(){
-		 expect(statement.displayStatment()).toContain(amount);
-	});
 });

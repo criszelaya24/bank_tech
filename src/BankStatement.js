@@ -10,6 +10,18 @@
 
 	Statement.prototype.displayStatment = function() {
 		var show = HeaderDate + HeaderPilar + HeaderCredit + HeaderPilar + HeaderDebit + HeaderPilar + HeaderBalance + '\n';
+		for (var i = 0; i < this.all.details.length; i++) {
+			show += dateFormater(element.date);
+			show += HeaderPilar;
+			if (element.amount > 0) {
+				show += element.amount;
+			}else {
+				show += HeaderPilar;
+				show += element.amount;
+			}
+			show += element.balance;
+			show += '\n'
+		}
 		return show;
 	};
 
