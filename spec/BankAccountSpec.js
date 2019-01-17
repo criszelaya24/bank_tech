@@ -3,8 +3,10 @@
 describe("Account", function(){
 	var account;
 	var amount = 100;
+	var withdraw = 50;
 	beforeEach(function(){
 		account = new Account();
+		spyOn(Transaction.prototype, 'add');
 	});
 
 	it("Verify account be a instance of Account", function(){
@@ -32,8 +34,21 @@ describe("Account", function(){
 	});
 
 		it("verify the instance of transaction been called", function(){
-			spyOn(Transaction.prototype, 'add');
 			account.deposit(amount);
+			expect(account.transaction.add).toHaveBeenCalled();
+		});
+	});
+
+	describe("Withdraw", function(){
+		it("Check if withdrwaw affect balance", function(){
+			account.deposit(amount);
+			account.withdraw(withdraw);
+			expect(account.balance).toEqual(amount - withdraw);
+		});
+
+		it("Should add this transaction", function(){
+			account.deposit(amount);
+			account.withdraw(withdraw);
 			expect(account.transaction.add).toHaveBeenCalled();
 		});
 	});

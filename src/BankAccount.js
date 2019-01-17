@@ -9,6 +9,9 @@
 		this.transaction.add(amount, this.balance) 
 	};
 
-
+	Account.prototype.withdraw = function(amount) {
+		this.balance -= amount;
+		this.transaction.add(-amount, this.balance)
+	};
 	exports.Account = Account;
 })(this);
