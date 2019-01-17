@@ -17,6 +17,6 @@ describe("Transaction", function(){
 	});
 
 	it("Should contain the details from the transaction", function(){
-		expect(transaction.details[0]).toEqual([amount, balance, date])
+		expect(transaction.details[0]).toEqual({amount: amount, balance: balance, date: date})
 	});
 })

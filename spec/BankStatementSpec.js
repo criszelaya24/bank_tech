@@ -1,13 +1,16 @@
 'use strict'
 
 describe("Statement", function(){
+	var account;
 	var statement;
 	var headers;
 	var amount;
 	beforeEach(function(){
+		account = new Account();
 		statement = new Statement();
 		headers    = "Date || Credit || Debit || Balance"
-      	amount     = "1000.00"
+      	amount     = 1000;
+      	account.deposit(amount)
 	});
 
 	it("Check if is intance", function(){
@@ -22,7 +25,11 @@ describe("Statement", function(){
 		expect(statement.all instanceof(Transaction)).toBe(true)
 	});
 
-	it("display all the transactions made", function(){
+	it("check header from the transactions made", function(){
 		expect(statement.displayStatment()).toContain(headers);
+	});
+
+	it("verifying that the transaction can contain details", function(){
+		 expect(statement.displayStatment()).toContain(amount);
 	});
 });

@@ -4,7 +4,7 @@
 	}
 
 	Transaction.prototype.add = function(amount, balance, date = new Date()) {
-		this.details.push([amount, balance, date]);
+		this.details.push({amount: amount, balance: balance, date: date});
 	};
 	exports.Transaction = Transaction;
 

@@ -2,7 +2,7 @@
 	var HeaderDate = "Date";
 	var HeaderCredit = "Credit";
 	var HeaderDebit = "Debit";
-	var HeaderBalance = "Balance";
+	var HeaderBalance = "Balance ";
 	var HeaderPilar = " || ";
 	function Statement(all = new Transaction()) {
 		this.all = all;
