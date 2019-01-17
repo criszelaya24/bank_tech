@@ -1,6 +1,6 @@
 (function(exports){
 	function Account(balance = 0, statement = new Statement()) {
-		this.balance = 0;
+		this.balance = balance;
 		this.statement = statement;
 	}
 

@@ -1,0 +1,22 @@
+{
+  "name": "bank_tech",
+  "version": "1.0.0",
+  "description": "Week #10 on makers, A bit interactive program that allows you have to have an temporal account and be able to make deposit and withdrawal and also see the current transaction.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/criszelaya24/bank_tech.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/criszelaya24/bank_tech/issues"
+  },
+  "homepage": "https://github.com/criszelaya24/bank_tech#readme"
+}
