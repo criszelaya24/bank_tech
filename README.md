@@ -22,5 +22,6 @@ For test open SpecRunner.html and then interacte with the app from the cosole.
 * [Boostrap](https://getbootstrap.com) - UI.
 * [JasminFramework](https://jasmine.github.io) - Framwork testing.
 * [Jquery](https://jquery.com/upgrade-guide/3.0/) - Interaction.
+* [ESlint](https://eslint.org) - Linter
 
 ![Index](img/index.png)
