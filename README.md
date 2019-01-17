@@ -3,9 +3,19 @@
 Week #10 on makers, A bit interactive program that allows you have to have an temporal account
 and be able to make deposit and withdrawal and also see the current transaction.
 
-## Getting Started
+## Requirements
+- Hvae installed npm
+- Have installed Eslint
 
-Just clone the repo and open index.html, for test open SpecRunner.html.
+## Getting Started
+```
+Just clone the repo and open index.html(Not for the moment, after I'll make it work)
+For test open SpecRunner.html and then interacte with the app from the cosole.
+```
+## Run test
+
+- Run eslint src (Linter)
+- Open SpecRunner (Tester)
 
 ## Built With
 
