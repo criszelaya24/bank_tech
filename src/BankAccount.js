@@ -6,12 +6,12 @@
 
 	Account.prototype.deposit = function(amount) {
 		this.balance += amount;
-		this.statement.addTransaction(amount, this.balance) 
+		this.statement.addTransaction(amount, this.balance); 
 	};
 
 	Account.prototype.withdraw = function(amount) {
 		this.balance -= amount;
-		this.statement.addTransaction(-amount, this.balance)
+		this.statement.addTransaction(-amount, this.balance);
 	};
 
 	Account.prototype.getStatement = function() {

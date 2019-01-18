@@ -14,7 +14,7 @@
 	};
 
 	Statement.prototype.displayStatment = function() {
-		var show = HeaderDate + HeaderPilar + HeaderCredit + HeaderPilar + HeaderDebit + HeaderPilar + HeaderBalance + '\n';
+		var show = HeaderDate + HeaderPilar + HeaderCredit + HeaderPilar + HeaderDebit + HeaderPilar + HeaderBalance + "\n";
 		for (var i = 0; i < this.transaction.details.length; i++) {
 			show += dateFormater(this.transaction.details[i]["date"]);
 			show += HeaderPilar;
@@ -25,19 +25,19 @@
 				show += HeaderPilar;
 				show += this.transaction.details[i]["amount"];
 			}
-			show += HeaderPilar
+			show += HeaderPilar;
 			show += this.transaction.details[i]["balance"];
-			show += '\n'
+			show += "\n";
 		}
 		return show;
 	};
 
 	function dateFormater(date) {
 		var day   = (date.getDate()).toString();
-	    var month = (date.getMonth() + 1).toString();
-	    var year  = (date.getFullYear()).toString();
+		var month = (date.getMonth() + 1).toString();
+		var year  = (date.getFullYear()).toString();
 
-	    return day + '/' + month + '/' + year;
+		return day + "/" + month + "/" + year;
 	}
 
 	exports.Statement = Statement;
