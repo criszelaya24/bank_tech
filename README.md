@@ -4,7 +4,7 @@ Week #10 on makers, A bit interactive program that allows you have to have an te
 and be able to make deposit and withdrawal and also see the current transaction.
 
 ## Requirements
-###From the console:
+### From the console:
 - Have installed npm / if's not just run ``brew install node``)
 - Check the version installed (node -v & npm -v)
 - Have installed Eslint (If you don't have it, just run ```npm install -g eslint```)
