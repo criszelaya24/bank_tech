@@ -6,7 +6,12 @@
     "parserOptions": {
         "ecmaVersion": 2018
     },
+    "globals": {
+        "Statement": true,
+        "Transaction": true
+    },
     "rules": {
+
         "indent": [
             "error",
             "tab"
@@ -23,5 +28,5 @@
             "error",
             "always"
         ]
-    }
+    },
 }
