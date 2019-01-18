@@ -9,12 +9,12 @@ and be able to make deposit and withdrawal and also see the current transaction.
 
 ## Getting Started
 ```
-Just clone the repo and open index.html(Not for the moment, after I'll make it work)
-For test open SpecRunner.html and then interacte with the app from the cosole.
+Just clone the repo and open SpecRunner.html and then interacte with the app from the cosole, as the next image:
 ```
+![Index](img/test.png)
 ## Run test
 
-- Run eslint src (Linter)
+- Run eslint src/ from the console (Linter)
 - Open SpecRunner (Tester)
 
 ## Built With
@@ -24,4 +24,3 @@ For test open SpecRunner.html and then interacte with the app from the cosole.
 * [Jquery](https://jquery.com/upgrade-guide/3.0/) - Interaction.
 * [ESlint](https://eslint.org) - Linter
 
-![Index](img/index.png)
