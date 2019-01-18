@@ -1,4 +1,5 @@
 (function(exports) {
+
 	function Transaction(array = []) {
 		this.details = array;
 	}
